@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="shortcut icon"
+      href="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/YouTube_full-color_icon_%282017%29.svg/2560px-YouTube_full-color_icon_%282017%29.svg.png"
+      type="image/x-icon"
+    />
+
+    <style>
+      * {
+        font-family: "Roboto", "Arial", sans-serif;
+        font-size: 14px;
+      }
+
+      #container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: auto;
+        gap: 25px;
+        width: 80%;
+        margin-left: 25px;
+        padding: 10px;
+        margin: auto;
+      }
+
+      #box {
+        margin: auto;
+        text-align: center;
+        cursor: pointer;
+      }
+
+      #navbar {
+        height: 50px;
+        width: 100%;
+        display: flex;
+        margin: auto;
+        margin-bottom: 5px;
+      }
+
+      #search_bar {
+        width: 50%;
+        height: 45px;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #search_input {
+        width: 90%;
+        height: 40px;
+        border: 1px solid grey;
+        margin: auto;
+        font-size: 17px;
+        padding-left: 10px;
+      }
+
+      #search_logo {
+        border: 1px solid grey;
+        background-color: #f8f8f8;
+        height: 42px;
+        width: 65px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #mic_logo {
+        border: 1px solid white;
+        background-color: #f8f8f8;
+        border-radius: 50px;
+        width: 40px;
+        height: 40px;
+        margin-left: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #img_logo {
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+      }
+
+      #right_corner {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 250px;
+        height: 45px;
+        margin-top: 4px;
+      }
+
+      #youtube_logo {
+        width: 110px;
+        height: 60px;
+      }
+
+      #left_corner {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 180px;
+      }
+
+      #topic {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 50px;
+        width: 80%;
+        padding: 5px;
+        border-bottom: 2px solid #f2f2f2;
+        border-top: 2px solid #f2f2f2;
+        margin-left: 220px;
+      }
+
+      .topic_content {
+        border: 2px solid #f2f2f2;
+        border-radius: 20px;
+        background-color: #f2f2f2;
+        padding: 10px 15px 10px 15px;
+      }
+
+      .all {
+        border-radius: 20px;
+        padding: 10px 15px 10px 15px;
+        background-color: black;
+        color: white;
+      }
+
+      #sidebar {
+        width: 200px;
+        height: auto;
+      }
+
+      .sidebar_content {
+        display: flex;
+        align-items: center;
+        width: 70%;
+        padding: 2px;
+      }
+
+      .sidebar_content > p,
+      .home > p {
+        margin-left: 20px;
+      }
+
+      .home {
+        background-color: #e5e5e5;
+        display: flex;
+        align-items: center;
+        width: 90%;
+        padding: 10px;
+        font-weight: 600;
+      }
+
+      #merge {
+        display: flex;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="navbar">
+      <div id="left_corner">
+        <div>
+          <span class="material-symbols-outlined"> menu </span>
+        </div>
+        <div>
+          <img
+            id="youtube_logo"
+            src="https://cdn.mos.cms.futurecdn.net/8gzcr6RpGStvZFA2qRt4v6.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+
+      <div id="search_bar">
+        <input id="search_input" type="text" placeholder="Search" />
+        <span id="search_button">
+          <span id="search_logo" class="material-symbols-outlined">
+            search
+          </span>
+        </span>
+        <span id="mic_logo" class="material-symbols-outlined">
+          keyboard_voice
+        </span>
+      </div>
+
+      <div id="right_corner">
+        <div>
+          <span class="material-symbols-outlined"> emergency_recording </span>
+        </div>
+        <div>
+          <span class="material-symbols-outlined"> apps </span>
+        </div>
+        <div>
+          <span class="material-symbols-outlined"> notifications </span>
+        </div>
+        <div>
+          <img
+            id="img_logo"
+            src="https://yt3.ggpht.com/yti/APfAmoFYC9hnmzE1sgLdHrCRVz6FMjMlr3hld0v3o9Mly_A=s88-c-k-c0x00ffffff-no-rj-mo"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+
+    <div id="topic">
+      <div class="all">All</div>
+      <div class="topic_content">Gaming</div>
+      <div class="topic_content">Live</div>
+      <div class="topic_content">Music</div>
+      <div class="topic_content">Mixces</div>
+      <div class="topic_content">Stock Market</div>
+      <div class="topic_content">Street Food</div>
+      <div class="topic_content">Wealth</div>
+      <div class="topic_content">T-series</div>
+      <div class="topic_content">Business</div>
+    </div>
+
+    <div id="merge">
+      <div id="sidebar">
+        <div class="home">
+          <span class="material-symbols-outlined"> home </span>
+
+          <p>Home</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> explore </span>
+
+          <p>Explore</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> shuffle </span>
+
+          <p>Shorts</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> subscriptions </span>
+
+          <p>Subscriptions</p>
+        </div>
+
+        <hr />
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> video_library </span>
+
+          <p>Library</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> history </span>
+          <p>History</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> slideshow </span>
+
+          <p>Your videos</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> timer </span>
+
+          <p>Watch later</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> thumb_up </span>
+
+          <p>Liked videos</p>
+        </div>
+
+        <div class="sidebar_content">
+          <span class="material-symbols-outlined"> expand_more </span>
+          <p>Show more</p>
+        </div>
+      </div>
+
+      <div id="container"></div>
+    </div>
+  </body>
+</html>
+
+<script>
+  var popular_IND_url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=mostpopularinindia&key=AIzaSyC2i69dTKzZsWnduWGP8Hq25UHwOXUy7P4`;
+
+  async function home_page() {
+    try {
+      var data = await fetch(popular_IND_url);
+
+      var response = await data.json();
+
+      console.log(response.items);
+      display_data(response.items);
+    } catch (error) {
+      console.log("error");
+    }
+  }
+
+  home_page();
+
+  document
+    .querySelector("#search_button")
+    .addEventListener("click", function_search);
+
+  function function_search() {
+    var query = document.querySelector("#search_input").value;
+
+    search_query(query);
+  }
+
+  function search_query(query) {
+    async function Api() {
+      var url = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=20&q=${query}&key=AIzaSyC2i69dTKzZsWnduWGP8Hq25UHwOXUy7P4`;
+
+      try {
+        var data = await fetch(url);
+
+        var response = await data.json();
+
+        console.log(response.items);
+
+        display_data(response.items);
+      } catch (error) {
+        console.log("error");
+      }
+    }
+    Api();
+  }
+
+  function display_data(data) {
+    document.querySelector("#container").innerHTML = null;
+
+    data.forEach(function ({
+      id: { videoId },
+      snippet: { title, thumbnails, channelTitle, publishTime },
+    }) {
+      var box = document.createElement("div");
+      box.setAttribute("id", "box");
+      document.querySelector("#container").append(box);
+
+      var iframe = document.createElement("iframe");
+      iframe.src = `https://www.youtube.com/embed/${videoId}`;
+      iframe.allow = "fullscreen";
+
+      var thumbnails_ = document.createElement("img");
+      thumbnails_.setAttribute("src", thumbnails.default.url);
+      thumbnails_.style.height = "150px";
+      thumbnails_.style.width = "250px";
+
+      var title_ = document.createElement("h3");
+      title_.innerText = title;
+      title_.style.fontWeight = "600";
+
+      var channelTitle_ = document.createElement("p");
+      channelTitle_.innerText = channelTitle;
+      channelTitle_.style.color = "grey";
+
+      var publishTime_ = document.createElement("p");
+      publishTime_.innerText = publishTime;
+      publishTime_.style.color = "grey";
+
+      box.append(thumbnails_, title_, channelTitle_);
+
+      box.addEventListener("click", function_video);
+
+      function function_video() {
+        var video = {
+          videoId_: videoId,
+          title_: title,
+        };
+
+        console.log(video);
+        localStorage.setItem("video", JSON.stringify(video));
+
+        window.location.href = "video.html";
+      }
+    });
+  }
+</script>
+
+<!-- <iframe
+  width="560"
+  height="315"
+  src="https://www.youtube.com/embed/7RDu2a3fbyk"
+  title="YouTube video player"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe> -->
+
+<!-- 'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&key=[YOUR_API_KEY]' -->
+
+<!--   'https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&maxResults=20&regionCode=IN&key=[YOUR_API_KEY]' -->
